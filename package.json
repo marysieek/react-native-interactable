@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node ./node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "postinstall": "ln -s lib/android . && ln -s lib/ios .",
+    "postinstall": "cd $PROJECT_DIR/node_modules/react-native-interactable && rm -rf \{ios\,android\} && rm -rf android && rm -rf ios && ln -s lib/android . && ln -s lib/ios .",
     "run-android": "cd playground/android && ./gradlew installDebug"
   },
   "dependencies": {},
